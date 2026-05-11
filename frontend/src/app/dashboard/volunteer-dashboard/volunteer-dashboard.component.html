@@ -1,0 +1,451 @@
+<!-- volunteer-dashboard.component.html -->
+
+<div class="dashboard-container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="logo-section">
+      <h3>EventOS</h3>
+      <span>Volunteer Panel</span>
+    </div>
+
+    <ul class="sidebar-menu">
+
+      <li class="active">
+        <i class="bi bi-grid-fill"></i>
+        <span>Dashboard</span>
+      </li>
+
+      <li>
+        <i class="bi bi-calendar-event-fill"></i>
+        <span>Events</span>
+      </li>
+
+      <li>
+        <i class="bi bi-people-fill"></i>
+        <span>Volunteers</span>
+      </li>
+
+      <li>
+        <i class="bi bi-bar-chart-fill"></i>
+        <span>Analytics</span>
+      </li>
+
+      <li>
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Logout</span>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Navbar -->
+    <nav class="top-navbar">
+
+      <div>
+        <h4>Volunteer Dashboard</h4>
+      </div>
+
+      <div class="navbar-right">
+
+        <div class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="nav-icon">
+          <i class="bi bi-bell-fill"></i>
+        </div>
+
+        <div class="profile-box">
+          <img src="https://i.pravatar.cc/45" alt="">
+          <div>
+            <h6>Sai Ram</h6>
+            <span>Volunteer Admin</span>
+          </div>
+        </div>
+
+      </div>
+
+    </nav>
+
+    <!-- Welcome Banner -->
+    <section class="welcome-banner">
+
+      <div>
+        <h2>Welcome Back, Sai Ram 👋</h2>
+        <p>Manage volunteers, events, attendance, analytics and activities.</p>
+      </div>
+
+      <button class="btn banner-btn">
+        <i class="bi bi-plus-circle-fill"></i>
+        Create Event
+      </button>
+
+    </section>
+
+    <!-- Analytics -->
+    <div class="row g-4 mt-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <div class="card-icon purple-bg">
+            <i class="bi bi-calendar2-event-fill"></i>
+          </div>
+
+          <div>
+            <h3>24</h3>
+            <p>Total Events</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <div class="card-icon blue-bg">
+            <i class="bi bi-people-fill"></i>
+          </div>
+
+          <div>
+            <h3>180</h3>
+            <p>Active Volunteers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <div class="card-icon green-bg">
+            <i class="bi bi-person-check-fill"></i>
+          </div>
+
+          <div>
+            <h3>540</h3>
+            <p>Registrations</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <div class="card-icon orange-bg">
+            <i class="bi bi-clock-history"></i>
+          </div>
+
+          <div>
+            <h3>1,240</h3>
+            <p>Volunteer Hours</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Middle Section -->
+    <div class="row mt-4 g-4">
+
+      <!-- Upcoming Events -->
+      <div class="col-lg-8">
+
+        <div class="dashboard-card">
+
+          <div class="card-header-custom">
+            <h5>Upcoming Events</h5>
+            <button class="btn btn-sm btn-light">
+              View All
+            </button>
+          </div>
+
+          <div class="row g-4 mt-2">
+
+            <div class="col-md-6">
+              <div class="event-card">
+                <span class="event-badge">Hackathon</span>
+
+                <h5>AI Innovation Summit</h5>
+
+                <p>
+                  Manage registrations and volunteer participation.
+                </p>
+
+                <div class="event-footer">
+                  <span>
+                    <i class="bi bi-calendar3"></i>
+                    18 May
+                  </span>
+
+                  <button class="btn btn-sm register-btn">
+                    Manage
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="event-card purple-card">
+
+                <span class="event-badge light-badge">
+                  Workshop
+                </span>
+
+                <h5>Cloud & DevOps Bootcamp</h5>
+
+                <p>
+                  Volunteer coordination and attendance tracking.
+                </p>
+
+                <div class="event-footer">
+                  <span>
+                    <i class="bi bi-calendar3"></i>
+                    22 May
+                  </span>
+
+                  <button class="btn btn-sm register-btn">
+                    Manage
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Notifications -->
+     
+
+    </div>
+
+    <!-- Attendance + Skills -->
+    <div class="row mt-4 g-4">
+
+      <!-- Attendance -->
+      <div class="col-lg-6">
+
+        <div class="dashboard-card attendance-card">
+
+          <div class="card-header-custom">
+            <h5>Attendance Analytics</h5>
+            <i class="bi bi-pie-chart-fill"></i>
+          </div>
+
+          <div class="attendance-circle">
+            <div class="circle-inner">
+              <h2>92%</h2>
+              <span>Attendance</span>
+            </div>
+          </div>
+
+          <div class="attendance-stats">
+
+            <div class="mini-stat">
+              <h6>450</h6>
+              <span>Present</span>
+            </div>
+
+            <div class="mini-stat">
+              <h6>32</h6>
+              <span>Absent</span>
+            </div>
+
+            <div class="mini-stat">
+              <h6>Gold</h6>
+              <span>Rating</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Skills -->
+      <div class="col-lg-6">
+
+        <div class="dashboard-card">
+
+          <div class="card-header-custom">
+            <h5>Volunteer Contribution</h5>
+            <i class="bi bi-lightning-fill"></i>
+          </div>
+
+          <div class="skill-box">
+
+            <div class="skill-item">
+              <div class="d-flex justify-content-between">
+                <span>Leadership</span>
+                <span>90%</span>
+              </div>
+
+              <div class="custom-progress">
+                <div class="progress-fill leadership"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="d-flex justify-content-between">
+                <span>Communication</span>
+                <span>85%</span>
+              </div>
+
+              <div class="custom-progress">
+                <div class="progress-fill communication"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="d-flex justify-content-between">
+                <span>Management</span>
+                <span>80%</span>
+              </div>
+
+              <div class="custom-progress">
+                <div class="progress-fill management"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Table + Leaderboard -->
+    <div class="row mt-4 g-4">
+
+      <!-- Event Table -->
+      <div class="col-lg-8">
+
+        <div class="dashboard-card">
+
+          <div class="card-header-custom">
+            <h5>Event Management</h5>
+          </div>
+
+          <div class="table-responsive mt-3">
+
+            <table class="table custom-table">
+
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Volunteers</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Hackathon</td>
+                  <td>18 May</td>
+                  <td>
+                    <span class="status active-status">
+                      Active
+                    </span>
+                  </td>
+                  <td>80</td>
+                </tr>
+
+                <tr>
+                  <td>Workshop</td>
+                  <td>22 May</td>
+                  <td>
+                    <span class="status pending-status">
+                      Pending
+                    </span>
+                  </td>
+                  <td>45</td>
+                </tr>
+
+                <tr>
+                  <td>Community Drive</td>
+                  <td>28 May</td>
+                  <td>
+                    <span class="status completed-status">
+                      Completed
+                    </span>
+                  </td>
+                  <td>120</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Leaderboard -->
+      <div class="col-lg-4">
+
+        <div class="dashboard-card">
+
+          <div class="card-header-custom">
+            <h5>Top Volunteers</h5>
+          </div>
+
+          <div class="leaderboard-item">
+            <img src="https://i.pravatar.cc/40?img=1">
+            <div>
+              <h6>Rahul</h6>
+              <span>120 Hours</span>
+            </div>
+          </div>
+
+          <div class="leaderboard-item">
+            <img src="https://i.pravatar.cc/40?img=2">
+            <div>
+              <h6>Keerthi</h6>
+              <span>110 Hours</span>
+            </div>
+          </div>
+
+          <div class="leaderboard-item">
+            <img src="https://i.pravatar.cc/40?img=3">
+            <div>
+              <h6>Sneha</h6>
+              <span>95 Hours</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section mt-5">
+
+      <div>
+        <h5>EventOS</h5>
+        <p>Volunteer Event Management Platform</p>
+      </div>
+
+      <div class="footer-links">
+        <span>Privacy</span>
+        <span>Support</span>
+        <span>Contact</span>
+      </div>
+
+    </footer>
+
+  </main>
+
+</div>

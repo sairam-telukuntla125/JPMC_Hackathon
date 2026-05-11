@@ -1,0 +1,311 @@
+<div class="dashboard-wrapper">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo-section">
+      <h3>EventOS</h3>
+    </div>
+
+    <ul class="menu-list">
+      <li class="active"><i class="bi bi-grid"></i> Dashboard</li>
+      <li><i class="bi bi-bookmark-check"></i> Registered Events</li>
+      <li><i class="bi bi-bell"></i> Notifications</li>
+      <li><i class="bi bi-bar-chart"></i> Reports</li>
+      <li><i class="bi bi-gear"></i> Settings</li>
+      <li><i class="bi bi-person-circle"></i> Profile</li>
+      <li><i class="bi bi-box-arrow-right"></i> Logout</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Navbar -->
+    <nav class="top-navbar">
+      <div>
+        <h4>Student Dashboard</h4>
+      </div>
+
+      <div class="nav-right">
+        <i class="bi bi-search"></i>
+        <i class="bi bi-bell"></i>
+
+        <div class="profile-box">
+          <img src="https://i.pravatar.cc/40" alt="">
+          <span>Sai Ram</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Welcome -->
+    <section class="welcome-section">
+      <div>
+        <h2>Welcome Back, Sai Ram 👋</h2>
+        <p>Track events, attendance, certificates and volunteer progress.</p>
+      </div>
+
+
+    </section>
+
+    <!-- Analytics Cards -->
+    <div class="row g-4 mt-1">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <i class="bi bi-calendar-check"></i>
+         <h3>
+  {{attendanceData?.totalEvents}}
+</h3>
+          <p>Events Joined</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <i class="bi bi-clipboard2-check"></i>
+         <h2 *ngIf="attendanceData">
+  {{attendanceData.attendancePercentage}}%
+</h2>
+          <p>Attendance</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <i class="bi bi-award-fill"></i>
+          <h3>
+  {{attendanceData?.certificates}}
+</h3>
+          <p>Certificates</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="analytics-card">
+          <i class="bi bi-clock-history"></i>
+          <h3>
+  {{attendanceData?.volunteerHours}}
+</h3>
+          <p>Volunteer Hours</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Upcoming Events -->
+    <div class="section-title mt-5">
+      <h4>Upcoming Events</h4>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <div class="event-card">
+          <h5>Hackathon 2026</h5>
+          <p>AI & Innovation Event</p>
+          <button class="btn btn-primary">Register</button>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="event-card">
+          <h5>Tech Workshop</h5>
+          <p>Cloud & DevOps Session</p>
+          <button class="btn btn-primary">Register</button>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="event-card">
+          <h5>Community Drive</h5>
+          <p>Volunteer Social Activity</p>
+          <button class="btn btn-primary">Register</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PREMIUM ATTENDANCE + NOTIFICATIONS -->
+
+    <div class="row mt-4 g-4">
+
+      <!-- Attendance -->
+      <div class="col-lg-6">
+        <div class="premium-card attendance-card">
+
+          <div class="card-top">
+            <div>
+              <h5>Attendance Overview</h5>
+              <p>Your event participation performance</p>
+            </div>
+
+            <div class="attendance-icon">
+              <i class="bi bi-clipboard2-check-fill"></i>
+            </div>
+          </div>
+
+          <div class="attendance-circle mt-4">
+            <div class="circle">
+              <h2>89%</h2>
+              <span>Present</span>
+            </div>
+          </div>
+
+          <div class="attendance-stats mt-4">
+
+            <div class="stat-box">
+             <h6>
+  {{attendanceData?.attendedEvents}}
+</h6>
+              <p>Events Attended</p>
+            </div>
+
+            <div class="stat-box">
+              <h6>
+  {{
+    attendanceData?.totalEvents -
+    attendanceData?.attendedEvents
+  }}
+</h6>
+              <p>Missed</p>
+            </div>
+
+            <div class="stat-box">
+              <h6>Gold</h6>
+              <p>Performance</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    
+
+    <!-- PREMIUM SKILLS + CALENDAR -->
+
+  
+
+      <!-- Calendar -->
+      <div class="col-lg-6">
+        <div class="premium-card calendar-card">
+
+          <div class="card-top">
+            <div>
+              <h5>Event Calendar</h5>
+              <p>Upcoming scheduled activities</p>
+            </div>
+
+            <i class="bi bi-calendar3 calendar-icon"></i>
+          </div>
+
+          <div class="calendar-events mt-4">
+
+            <div class="calendar-event">
+              <div class="date-box">
+                <h6>12</h6>
+                <span>MAY</span>
+              </div>
+
+              <div>
+                <h6>AI Workshop</h6>
+                <p>10:00 AM • Seminar Hall</p>
+              </div>
+            </div>
+
+            <div class="calendar-event">
+              <div class="date-box purple">
+                <h6>18</h6>
+                <span>MAY</span>
+              </div>
+
+              <div>
+                <h6>Hackathon 2026</h6>
+                <p>9:30 AM • Innovation Lab</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  
+
+    <!-- PREMIUM RECOMMENDED EVENTS -->
+
+    <div class="section-title mt-5">
+      <h4>Recommended Events</h4>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <div class="premium-recommend-card">
+
+          <div class="recommend-top">
+            <span class="badge bg-primary">Trending</span>
+            <i class="bi bi-stars"></i>
+          </div>
+
+          <h5>Open Source Meetup</h5>
+          <p>Improve collaboration & GitHub contribution skills.</p>
+
+          <button class="btn btn-light w-100">
+            Explore Event
+          </button>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="premium-recommend-card purple-card">
+
+          <div class="recommend-top">
+            <span class="badge bg-light text-dark">Popular</span>
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+
+          <h5>UI/UX Bootcamp</h5>
+          <p>Learn premium product and dashboard designing.</p>
+
+          <button class="btn btn-light w-100">
+            Explore Event
+          </button>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="premium-recommend-card dark-card">
+
+          <div class="recommend-top">
+            <span class="badge bg-warning text-dark">Networking</span>
+            <i class="bi bi-people-fill"></i>
+          </div>
+
+          <h5>Startup Expo</h5>
+          <p>Connect with founders and innovative startups.</p>
+
+          <button class="btn btn-light w-100">
+            Explore Event
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+
+   
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <p>© 2026 EventOS Student Dashboard | Designed for Volunteer Management</p>
+    </footer>
+
+  </div>
+
+</div>
